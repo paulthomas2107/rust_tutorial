@@ -6,5 +6,10 @@ use std::fs::File;
 use std::cmp::Ordering;
 
 fn main() {
-    println!("Hello, Paul 01");
+
+    println!("What is your name?");
+    let mut name = String::new();
+    let greeting: &str = "Nice to meet you";
+    io::stdin().read_line(&mut name).expect("No input....");
+    println!("Hello, {} !", name.trim());
 }
